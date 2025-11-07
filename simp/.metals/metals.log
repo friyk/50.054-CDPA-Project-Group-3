@@ -108,3 +108,47 @@ INFO: Unsupported notification method: $/setTrace
 2024.10.04 08:55:17 INFO  Exiting server[0m
 2025.11.07 09:13:41 INFO  Started: Metals version 1.6.3 in folders 'C:\Users\wesle\Desktop\School\project\simp' for client Visual Studio Code 1.105.1.
 2025.11.07 09:13:42 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.07 09:13:48 INFO  running 'C:\Program Files\Java\jdk-25\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\wesle\AppData\Local\Temp\metals7599609033398890944\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2025.11.07 09:13:49 ERROR WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+2025.11.07 09:13:49 ERROR WARNING: sun.misc.Unsafe::arrayBaseOffset has been called by net.openhft.hashing.UnsafeAccess (file:/C:/Users/wesle/.sbt/boot/scala-2.12.20/org.scala-sbt/sbt/1.11.6/zero-allocation-hashing-0.16.jar)
+2025.11.07 09:13:49 ERROR WARNING: Please consider reporting this to the maintainers of class net.openhft.hashing.UnsafeAccess
+2025.11.07 09:13:49 ERROR WARNING: sun.misc.Unsafe::arrayBaseOffset will be removed in a future release
+2025.11.07 09:13:49 ERROR WARNING: A restricted method in java.lang.System has been called
+2025.11.07 09:13:49 ERROR WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/wesle/.sbt/boot/scala-2.12.20/org.scala-sbt/sbt/1.11.6/jna-5.12.0.jar)
+2025.11.07 09:13:49 ERROR WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+2025.11.07 09:13:49 ERROR WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+2025.11.07 09:13:49 ERROR 
+2025.11.07 09:13:49 INFO  [info] welcome to sbt 1.11.6 (Oracle Corporation Java 25)
+2025.11.07 09:13:51 INFO  [info] loading settings for project simp-build-build-build from metals.sbt...
+2025.11.07 09:13:51 INFO  [info] loading project definition from C:\Users\wesle\Desktop\School\project\simp\project\project\project
+2025.11.07 09:13:53 INFO  [info] loading settings for project simp-build-build from metals.sbt...
+2025.11.07 09:13:53 INFO  [info] loading project definition from C:\Users\wesle\Desktop\School\project\simp\project\project
+2025.11.07 09:13:55 INFO  [success] Generated .bloop\simp-build-build.json
+2025.11.07 09:13:55 INFO  [success] Total time: 2 s, completed 7 Nov 2025, 9:13:55 am
+2025.11.07 09:13:55 INFO  [info] loading settings for project simp-build from metals.sbt, plugins.sbt...
+2025.11.07 09:13:55 INFO  [info] loading project definition from C:\Users\wesle\Desktop\School\project\simp\project
+2025.11.07 09:13:58 INFO  [success] Generated .bloop\simp-build.json
+2025.11.07 09:13:58 INFO  [success] Total time: 2 s, completed 7 Nov 2025, 9:13:58 am
+2025.11.07 09:13:59 INFO  [info] loading settings for project simp from build.sbt...
+2025.11.07 09:13:59 INFO  [info] set current project to simp (in build file:/C:/Users/wesle/Desktop/School/project/simp/)
+2025.11.07 09:13:59 INFO  [success] Generated .bloop\simp.json
+2025.11.07 09:13:59 INFO  [success] Generated .bloop\simp-test.json
+2025.11.07 09:13:59 INFO  [success] Total time: 1 s, completed 7 Nov 2025, 9:14:00 am
+2025.11.07 09:14:00 INFO  time: ran 'sbt bloopInstall' in 12s
+2025.11.07 09:14:00 INFO  Attempting to connect to the build server...
+2025.11.07 09:14:00 INFO  No running Bloop server found, starting one.
+2025.11.07 09:14:01 INFO  Starting compilation server
+2025.11.07 09:14:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\wesle\Desktop\School\project\simp\.metals\bsp.trace.json or C:\Users\wesle\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.11.07 09:14:03 INFO  Attempting to connect to the build server...
+2025.11.07 09:14:03 INFO  Found a Bloop server running
+2025.11.07 09:14:03 INFO  Attempting to connect to the build server...
+2025.11.07 09:14:03 INFO  Found a Bloop server running
+2025.11.07 09:14:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\wesle\Desktop\School\project\simp\project\project\.metals\bsp.trace.json or C:\Users\wesle\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.11.07 09:14:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\wesle\Desktop\School\project\simp\project\.metals\bsp.trace.json or C:\Users\wesle\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.11.07 09:14:03 INFO  time: Connected to build server in 2.8s
+2025.11.07 09:14:03 INFO  Connected to Build server: Bloop v2.0.16
+2025.11.07 09:14:03 INFO  time: Imported build in 0.16s
+2025.11.07 09:14:07 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.07 09:14:16 INFO  time: indexed workspace in 12s
+Nov 07, 2025 9:14:30 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
