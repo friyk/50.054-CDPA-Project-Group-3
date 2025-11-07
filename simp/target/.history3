@@ -1,1 +1,7 @@
 1762478048796:compile
+1762478248117:compile testOnly sutd.compiler.simp.TestLexer
+1762478261860:compile "testOnly sutd.compiler.simp.TestLexer"
+1762478351514:compile testOnly sutd.compiler.simp.TestLexer
+1762478366986:testOnly sutd.compiler.simp.TestLexer
+1762478399220:testOnly sutd.compiler.simp.TestParser -- -z p_spaces
+1762485225818:exit
