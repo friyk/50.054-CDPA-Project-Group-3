@@ -1,0 +1,5 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(-explain, Some(1fa21034-2295-42bf-849f-0bc7b1c69dbc), Some(CommandSource(console0)))[0m
+[0m[[0m[31merror[0m] [0m[0mExpected 'error'[0m
+[0m[[0m[31merror[0m] [0m[0m-explain[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

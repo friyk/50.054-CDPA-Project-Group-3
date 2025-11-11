@@ -177,9 +177,15 @@ object Parser {
       * @return
       */
 
-    def p_space:Parser[PEnv, LToken] = item // fixme
+    def p_space:Parser[PEnv, LToken] = sat(ltoken => ltoken match {
+        case WhiteSpace(src,c) => true 
+        case _ => false
+    })
     
-    def p_spaces:Parser[PEnv, List[LToken]] = many(item) // fixme
+    
+    def p_spaces:Parser[PEnv, List[LToken]] = for {
+        spaces <- many(p_space)
+    } yield spaces
 
     /** Lab 1 Task 1.1 end */
 
@@ -190,7 +196,52 @@ object Parser {
       *   E ::= E Op E | X | C | (E) contains left recursion
       * @return
       */
-    def p_exp:Parser[PEnv, Exp] = empty(ConstExp(IntConst(1))) // fixme
+    /** applying left recursion elimination,
+      * E ::= XE' | CE' | (E)E'
+      * E' ::= Op EE' | ε
+      * 
+      */
+    def p_exp: Parser[PEnv, Exp] = for {
+        first <- choice(choice(p_var_expp)(p_const_expp))(p_paren_expp)
+        _ <- p_spaces
+        rest <- many(for {
+            op <- choice(choice(choice(choice(p_plus)(p_minus))(p_mult))(p_dequal))(p_lthan)
+            _ <- p_spaces
+            prim <- choice(choice(p_var_expp)(p_const_expp))(p_paren_expp)
+        } yield (op, prim))
+    } yield {
+        rest.foldLeft(first) { case (acc, (op, r)) =>
+            op match {
+                case PlusSign(_)    => Plus(acc, r)
+                case MinusSign(_)   => Minus(acc, r)
+                case AsterixSign(_) => Mult(acc, r)
+                case DEqSign(_)     => DEqual(acc, r)
+                case LThanSign(_)   => LThan(acc, r)
+                case _              => acc
+            }
+        }
+    }
+
+
+    def p_var_expp: Parser[PEnv, Exp] = for { 
+        v <- p_var 
+    } yield VarExp(v)
+
+    def p_const_expp: Parser[PEnv, Exp] = for { 
+        c <- p_const 
+    } yield ConstExp(c)
+
+    def p_paren_expp: Parser[PEnv, Exp] = for {
+        _ <- p_lparen
+        e <- p_exp
+        _ <- p_rparen
+    } yield ParenExp(e)
+
+
+
+    
+
+
     /** Lab 1 Task 1.2 end */
     
     /**

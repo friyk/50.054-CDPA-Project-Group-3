@@ -5,3 +5,30 @@
 1762478366986:testOnly sutd.compiler.simp.TestLexer
 1762478399220:testOnly sutd.compiler.simp.TestParser -- -z p_spaces
 1762485225818:exit
+1762833335712:compile
+1762833477715:testOnly sutd.compiler.simp.TestParser -- -z p_spaces
+1762834938938:compile
+1762834958614:compile -explain
+1762834964746:compile - explain
+1762834977699:compile-explain
+1762835023714:compile -explain
+1762835028632:-explain
+1762835298793:testOnly sutd.compiler.simp.TestParser
+1762835330775:test
+1762835803978:compile
+1762835811076:testOnly sutd.compiler.simp.TestParser
+1762836139956:compile
+1762836145743:testOnly sutd.compiler.simp.TestParser
+1762836187149:exit
+1762838174099:compile
+1762838184090:testOnly sutd.compiler.simp.TestParser
+1762838455357:exit
+1762839281119:compile
+1762839287824:test
+1762839292912:testOnly sutd.compiler.simp.TestParser
+1762839500191:compile
+1762839503854:testOnly sutd.compiler.simp.TestParser
+1762839837274:compile
+1762839840192:testOnly sutd.compiler.simp.TestParser
+1762839927682:compile
+1762839930074:testOnly sutd.compiler.simp.TestParser

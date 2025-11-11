@@ -1,3 +1,7 @@
 #Successful Tests
-#Fri Nov 07 09:19:59 GMT+08:00 2025
-sutd.compiler.simp.TestLexer=1762478371645
+#Tue Nov 11 13:45:30 GMT+08:00 2025
+sutd.compiler.simp.TestCFG=1762839288283
+sutd.compiler.simp.TestLexer=1762839288365
+sutd.compiler.simp.TestMaximalMunch=1762839288291
+sutd.compiler.simp.TestPAInt=1762839288283
+sutd.compiler.simp.TestParser=1762839930277

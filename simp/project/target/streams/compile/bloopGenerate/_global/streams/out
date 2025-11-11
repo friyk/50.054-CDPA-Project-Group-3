@@ -1,4 +1,4 @@
-[debug] [simp-build] Classpath dependencies List()
-[debug] [simp-build] Dependencies from configurations List()
-[debug] Bloop wrote the configuration of project 'simp-build' to 'C:\Users\wesle\Desktop\School\project\simp\project\.bloop\simp-build.json'
-[success] Generated .bloop\simp-build.json
+[0m[[0m[0mdebug[0m] [0m[0m[simp-build] Classpath dependencies List()[0m
+[0m[[0m[0mdebug[0m] [0m[0m[simp-build] Dependencies from configurations List()[0m
+[0m[[0m[0mdebug[0m] [0m[0mBloop wrote the configuration of project 'simp-build' to 'C:\Users\wesle\Desktop\School\project\simp\project\.bloop\simp-build.json'[0m
+[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop\simp-build.json[0m
