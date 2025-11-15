@@ -21,3 +21,78 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+
+dist
+dist-*
+cabal-dev
+*.o
+*.hi
+*.hie
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+*.eventlog
+.stack-work/
+cabal.project.local
+cabal.project.local~
+.HTF/
+.ghc.environment.*
+
+# === SBT Build Artifacts ===
+target/
+project/target/
+project/project/
+test-reports/
+
+# === Metals / Bloop / BSP (Scala IDE) ===
+.metals/
+.bloop/
+.bsp/
+*.metals.lock.db
+*.metals.mv.db
+*.metals.mv.db.bak
+*.metals.trace.db
+metals.sbt
+
+# === VSCode ===
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# === Other Scala/SBT ===
+.ensime
+.ensime_cache
+.scala_dependencies
+.worksheet
+.history
+.history3
+
+# === Compiled / Build ===
+*.class
+*.log
+*.jar
+*.war
+*.ear
+
+# === OS / Editor ===
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+*.iml
+
+# === Other ===
+cache/
+out/
+
+

@@ -40,7 +40,7 @@ object MMUpDown {
          GE((e)) |- (up_e, down_e)
         */ 
         case ParenExp(e) => genExp(e)
-        // Lab 1 Task 2.1 
+        // Lab 1 Task 2.1 : implement m2Op rule
         /*
          GE(e1) |- (up_e1, down_e1)
          GE(e2) |- (up_e2, down_e2)
@@ -49,7 +49,41 @@ object MMUpDown {
         --------------------------------------------------------------------- (Op)
          GE(e1 op e2) |- (X, down_e1 ++ down_e2 ++ [L:X <- up_e1 op up_e2])
          */ 
-        case _ =>  me.pure((IntLit(1), Nil)) // fixme
+        // d <- e1-e2
+        case Minus(e1,e2) =>  for {
+            (up_e1, down_e1) <- genExp(e1)
+            (up_e2, down_e2) <- genExp(e2)
+            x                <- newTemp
+            lbl              <- newLabel
+        } yield (x, down_e1++down_e2++List((lbl, IMinus(x, up_e1, up_e2))))
+        // d <- e1+e2
+        case Plus(e1,e2) =>  for {
+            (up_e1, down_e1) <- genExp(e1)
+            (up_e2, down_e2) <- genExp(e2)
+            x                <- newTemp
+            lbl              <- newLabel
+        } yield (x, down_e1++down_e2++List((lbl, IPlus(x, up_e1, up_e2))))
+        // d <- e1*e2
+        case Mult(e1,e2) =>  for {
+            (up_e1, down_e1) <- genExp(e1)
+            (up_e2, down_e2) <- genExp(e2)
+            x                <- newTemp
+            lbl              <- newLabel
+        } yield (x, down_e1++down_e2++List((lbl, IMult(x, up_e1, up_e2))))
+        // d <- e1==e2
+        case DEqual(e1,e2) =>  for {
+            (up_e1, down_e1) <- genExp(e1)
+            (up_e2, down_e2) <- genExp(e2)
+            x                <- newTemp
+            lbl              <- newLabel
+        } yield (x, down_e1++down_e2++List((lbl, IDEqual(x, up_e1, up_e2))))
+        // d <- e1<e2
+        case LThan(e1,e2) =>  for {
+            (up_e1, down_e1) <- genExp(e1)
+            (up_e2, down_e2) <- genExp(e2)
+            x                <- newTemp
+            lbl              <- newLabel
+        } yield (x, down_e1++down_e2++List((lbl, ILThan(x, up_e1, up_e2))))
         // Lab 1 Task 2.1 end
     }
 
@@ -136,8 +170,19 @@ object MMUpDown {
         --------------------------------------------------------- (While)
         G(while cond {body}) |- down_cond ++ instrs1 ++ instrs2'
         */
-        case _ => StateT{ st => Identity((st, List())) }  // fixme
-        // Lab 1 Task 2.2 end
+        case While(cond, body) => for {
+            lblBWhile        <- chkNextLabel
+            (cond_u, cond_d) <- genExp(cond)
+
+            lblWhileCj       <- newLabel
+            instrs2          <- cogen(body)
+            lblEndBody       <- newLabel
+
+            lblEndWhile      <- chkNextLabel
+
+            instrs1          = List((lblWhileCj, IIfNot(cond_u, lblEndWhile)))
+            instrs2a         = instrs2 ++ List((lblEndBody, IGoto(lblBWhile)))
+        } yield cond_d ++ instrs1 ++ instrs2a
     }
 
 
