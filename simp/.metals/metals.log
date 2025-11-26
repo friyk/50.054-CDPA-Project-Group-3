@@ -946,3 +946,109 @@ java.nio.file.FileSystemNotFoundException: Provider "git" not installed
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
 
+Nov 15, 2025 8:44:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "git:/c%3A/Users/wesle/Desktop/School/project/simp/src/main/scala/sutd/compiler/simp/ir/MMUpDown.scala?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5Cwesle%5C%5CDesktop%5C%5CSchool%5C%5Cproject%5C%5Csimp%5C%5Csrc%5C%5Cmain%5C%5Cscala%5C%5Csutd%5C%5Ccompiler%5C%5Csimp%5C%5Cir%5C%5CMMUpDown.scala%22%2C%22ref%22%3A%2210a8641fef5d5fbc90356a95f56de6bc8d0f245b%22%7D"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "git" not installed
+	at java.base/java.nio.file.Path.of(Path.java:210)
+	at java.base/java.nio.file.Paths.get(Paths.java:95)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:149)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:209)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:796)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:793)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:786)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+Nov 15, 2025 8:45:13 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "git:/c%3A/Users/wesle/Desktop/School/project/simp/src/main/scala/sutd/compiler/simp/ir/MMUpDown.scala?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5Cwesle%5C%5CDesktop%5C%5CSchool%5C%5Cproject%5C%5Csimp%5C%5Csrc%5C%5Cmain%5C%5Cscala%5C%5Csutd%5C%5Ccompiler%5C%5Csimp%5C%5Cir%5C%5CMMUpDown.scala%22%2C%22ref%22%3A%2210a8641fef5d5fbc90356a95f56de6bc8d0f245b%22%7D"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "git" not installed
+	at java.base/java.nio.file.Path.of(Path.java:210)
+	at java.base/java.nio.file.Paths.get(Paths.java:95)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:149)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:209)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:796)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:793)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:786)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+2025.11.15 20:48:51 INFO  Shutting down server
+2025.11.15 20:48:51 INFO  shutting down Metals
+2025.11.15 20:48:51 INFO  Shut down connection with build server.
+2025.11.15 20:48:51 INFO  Shut down connection with build server.
+2025.11.15 20:48:51 INFO  Shut down connection with build server.
+2025.11.15 20:48:51 INFO  Exiting server
+2025.11.24 13:04:56 INFO  Started: Metals version 1.6.3 in folders 'C:\Users\wesle\Desktop\School\project\simp' for client Visual Studio Code 1.106.0.
+2025.11.24 13:04:58 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.24 13:04:59 INFO  Attempting to connect to the build server...
+2025.11.24 13:04:59 INFO  No running Bloop server found, starting one.
+2025.11.24 13:05:00 INFO  Starting compilation server
+Nov 24, 2025 1:05:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Nov 24, 2025 1:05:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Nov 24, 2025 1:05:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.11.24 13:05:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\wesle\Desktop\School\project\simp\.metals\bsp.trace.json or C:\Users\wesle\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.11.24 13:05:05 INFO  Attempting to connect to the build server...
+2025.11.24 13:05:05 INFO  Found a Bloop server running
+2025.11.24 13:05:05 INFO  Attempting to connect to the build server...
+2025.11.24 13:05:05 INFO  Found a Bloop server running
+2025.11.24 13:05:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\wesle\Desktop\School\project\simp\project\project\.metals\bsp.trace.json or C:\Users\wesle\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.11.24 13:05:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\wesle\Desktop\School\project\simp\project\.metals\bsp.trace.json or C:\Users\wesle\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.11.24 13:05:05 INFO  time: Connected to build server in 6.25s
+2025.11.24 13:05:05 INFO  Connected to Build server: Bloop v2.0.16
+2025.11.24 13:05:05 INFO  time: Imported build in 0.37s
+Nov 24, 2025 1:05:07 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Nov 24, 2025 1:05:09 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Nov 24, 2025 1:05:09 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.11.24 13:05:15 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2025.11.24 13:05:20 INFO  time: indexed workspace in 14s
+Option -Yresolve-term-conflict is deprecated: Use -Xresolve-term-conflict instead.
+2025.11.24 13:07:20 INFO  Shutting down server
+2025.11.24 13:07:20 INFO  shutting down Metals
+2025.11.24 13:07:20 INFO  Shut down connection with build server.
+2025.11.24 13:07:20 INFO  Shut down connection with build server.
+2025.11.24 13:07:20 INFO  Shut down connection with build server.
+2025.11.24 13:07:20 INFO  Exiting server

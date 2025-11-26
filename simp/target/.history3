@@ -32,3 +32,5 @@
 1762839840192:testOnly sutd.compiler.simp.TestParser
 1762839927682:compile
 1762839930074:testOnly sutd.compiler.simp.TestParser
+1763210747506:test
+1763210901930:testOnly sutd.compiler.simp.TestMMUpDown
