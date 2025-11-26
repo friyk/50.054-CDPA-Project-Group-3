@@ -1,2 +1,14 @@
 [0m[[0m[33mwarn[0m] [0m[0mOption -Yresolve-term-conflict is deprecated: Use -Xresolve-term-conflict instead.[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: C:\Users\wesle\Desktop\School\project\simp\src\main\scala\sutd\compiler\simp\interpreter\SimpInt.scala:75:18 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m75 |[0m    [33mgiven[0m [36mevalMany[0m[[35mA[0m](using [36mi[0m:[35mEvaluable[0m[[35mA[0m]):[35mEvaluable[0m[[35mList[0m[[35mA[0m]] = [33mnew[0m [35mEvaluable[0m[[35mList[0m[[35mA[0m]] {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                  ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m   This old given syntax is no longer supported; use `=>` instead of `:`[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- [E029] Pattern Match Exhaustivity Warning: C:\Users\wesle\Desktop\School\project\simp\src\main\scala\sutd\compiler\simp\interpreter\SimpInt.scala:106:20 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m106 |[0m            dlt2 <- c [33mmatch[0m {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m                    ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m[33mmatch[0m may not be exhaustive.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0mIt would fail on pattern case: sutd.compiler.simp.syntax.AST.Const.BoolConst(_)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
