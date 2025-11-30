@@ -1,9 +1,53 @@
 [0m[[0m[33mwarn[0m] [0m[0mOption -Yresolve-term-conflict is deprecated: Use -Xresolve-term-conflict instead.[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: C:\Users\wesle\Desktop\School\project\simp\src\main\scala\sutd\compiler\simp\interpreter\SimpInt.scala:75:18 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/src/main/scala/sutd/compiler/simp/backend/JVM.scala:65:27 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m65 |[0m    [33mgiven[0m [36mstateMVMonadError[0m[[35mS[0m]:[35mStateMVMonadError[0m[[35mS[0m] = [33mnew[0m [35mStateMVMonadError[0m[[35mS[0m]{}[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                           ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m   This old given syntax is no longer supported; use `=>` instead of `:`[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/src/main/scala/sutd/compiler/simp/interpreter/SimpInt.scala:75:18 [0m[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m[33m75 |[0m    [33mgiven[0m [36mevalMany[0m[[35mA[0m](using [36mi[0m:[35mEvaluable[0m[[35mA[0m]):[35mEvaluable[0m[[35mList[0m[[35mA[0m]] = [33mnew[0m [35mEvaluable[0m[[35mList[0m[[35mA[0m]] {[0m
 [0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                  ^[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m   This old given syntax is no longer supported; use `=>` instead of `:`[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- [E029] Pattern Match Exhaustivity Warning: C:\Users\wesle\Desktop\School\project\simp\src\main\scala\sutd\compiler\simp\interpreter\SimpInt.scala:106:20 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/src/main/scala/sutd/compiler/simp/ir/SSA.scala:476:21 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m476 |[0m    [33mgiven[0m [36moprOrdering[0m(using [36mso[0m:[35mOrdering[0m[[35mString[0m]):[35mOrdering[0m[[35mOpr[0m] = [33mnew[0m [35mOrdering[0m[[35mOpr[0m] {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m                     ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m This old given syntax is no longer supported; use `=>` instead of `:`[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/src/main/scala/sutd/compiler/simp/ir/Util.scala:19:25 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m19 |[0m    [33mgiven[0m [36mstateCogenMonad[0m[[35mS[0m]:[35mStateCogenMonad[0m[[35mS[0m] = [33mnew[0m [35mStateCogenMonad[0m[[35mS[0m]{}[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                         ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m   This old given syntax is no longer supported; use `=>` instead of `:`[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/src/main/scala/sutd/compiler/simp/lattice/CompleteLattice.scala:39:25 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m39 |[0m    [33mgiven[0m [36mpowerSetLattice[0m[[35mA[0m]:[35mCompleteLattice[0m[[35mSet[0m[[35mA[0m]] = [33mnew[0m [35mCompleteLattice[0m[[35mSet[0m[[35mA[0m]] {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                         ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m   This old given syntax is no longer supported; use `=>` instead of `:`[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/src/main/scala/sutd/compiler/simp/lattice/CompleteLattice.scala:60:20 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m60 |[0m    [33mgiven[0m [36mmapLattice[0m[[35mK[0m,[35mV[0m](using [36mvcl[0m:[35mCompleteLattice[0m[[35mV[0m]):[35mCompleteLattice[0m[[35mMap[0m[[35mK[0m,[35mV[0m]] = [33mnew[0m [35mCompleteLattice[0m[[35mMap[0m[[35mK[0m,[35mV[0m]] {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                    ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m   This old given syntax is no longer supported; use `=>` instead of `:`[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/src/main/scala/sutd/compiler/simp/semantic/TypeInf.scala:104:27 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m104 |[0m    [33mgiven[0m [36mpairSubstitutable[0m[[35mA[0m,[35mB[0m](using [36mia[0m:[35mSubstitutable[0m[[35mA[0m])(using [36mib[0m:[35mSubstitutable[0m[[35mB[0m]):[35mSubstitutable[0m[([35mA[0m,[35mB[0m)] = [33mnew[0m [35mSubstitutable[0m[([35mA[0m,[35mB[0m)]{[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m                           ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m This old given syntax is no longer supported; use `=>` instead of `:`[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/src/main/scala/sutd/compiler/simp/semantic/TypeInf.scala:118:27 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m118 |[0m    [33mgiven[0m [36mlistSubstitutable[0m[[35mA[0m](using [36mi[0m:[35mSubstitutable[0m[[35mA[0m]):[35mSubstitutable[0m[[35mList[0m[[35mA[0m]] = [33mnew[0m [35mSubstitutable[0m[[35mList[0m[[35mA[0m]]{[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m                           ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m This old given syntax is no longer supported; use `=>` instead of `:`[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/src/main/scala/sutd/compiler/simp/semantic/TypeInf.scala:133:17 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m133 |[0m    [33mgiven[0m [36minfList[0m[[35mA[0m](using [36minfA[0m:[35mInfer[0m[[35mA[0m]):[35mInfer[0m[[35mList[0m[[35mA[0m]] = [33mnew[0m [35mInfer[0m[[35mList[0m[[35mA[0m]] {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m                 ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m This old given syntax is no longer supported; use `=>` instead of `:`[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/src/main/scala/sutd/compiler/simp/semantic/TypeInf.scala:244:23 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m244 |[0m    [33mgiven[0m [36mlistUnifiable[0m[[35mA[0m](using [36mu[0m:[35mUnifiable[0m[[35mA[0m])(using [36ms[0m:[35mSubstitutable[0m[[35mList[0m[[35mA[0m]]):[35mUnifiable[0m[[35mList[0m[[35mA[0m]] = [33mnew[0m [35mUnifiable[0m[[35mList[0m[[35mA[0m]] {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m                       ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m This old given syntax is no longer supported; use `=>` instead of `:`[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/src/main/scala/sutd/compiler/simp/syntax/BacktrackParsec.scala:49:26 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m49 |[0m    [33mgiven[0m [36mparsecMonadError[0m[[35mT[0m]: [35mMonadError[0m[[35mParserM[0m[[35mT[0m], [35mError[0m] =[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m   This old given syntax is no longer supported; use `=>` instead of `:`[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/src/main/scala/sutd/compiler/simp/syntax/Parsec.scala:82:26 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m82 |[0m    [33mgiven[0m [36mparsecMonadError[0m[[35mE[0m]: [35mMonadError[0m[[35mParserM[0m[[35mE[0m], [35mError[0m] =[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m   This old given syntax is no longer supported; use `=>` instead of `:`[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- [E029] Pattern Match Exhaustivity Warning: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/src/main/scala/sutd/compiler/simp/interpreter/SimpInt.scala:106:20 [0m[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m[33m106 |[0m            dlt2 <- c [33mmatch[0m {[0m
 [0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m                    ^[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m[33mmatch[0m may not be exhaustive.[0m
@@ -11,4 +55,4 @@
 [0m[[0m[33mwarn[0m] [0m[0m[33m    |[0mIt would fail on pattern case: sutd.compiler.simp.syntax.AST.Const.BoolConst(_)[0m
 [0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m longer explanation available when compiling with `-explain`[0m
-[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0m14 warnings found[0m

@@ -83,7 +83,17 @@ object TypeInf {
     given exTypeSubstitutable:Substitutable[ExType] = new Substitutable[ExType]{
         def applySubst(tysubst:TypeSubst)(ty:ExType):ExType = tysubst match {
             // Lab 2 Task 2.1
-            case _ => ty // fixme
+            case Empty => ty
+            case RevComp((n, t), psi) => ty match {
+                case MonoType(_) => applySubst(psi)(ty)
+                case TypeVar(m) => {
+                    if (n == m) {
+                        applySubst(psi)(t)
+                    } else {
+                        applySubst(psi)(ty)
+                    }
+                }
+            }
             // Lab 2 Task 2.1 end
         }
     }
@@ -137,7 +147,17 @@ object TypeInf {
             }
             case Ret(x) => Set()
             // Lab 2 Task 2.3
-            case _ => Set() // fixme
+            case If(cond, th, el) => {
+                val (condType, condConstraints) = inferExp(cond)
+                val thenConstraints = infList.infer(th)
+                val elseConstraints = infList.infer(el)
+                condConstraints ++ thenConstraints ++ elseConstraints + ((condType, MonoType(BoolTy)))
+            }
+            case While(cond, b) => {
+                val (condType, condConstraints) = inferExp(cond)
+                val bodyConstraints = infList.infer(b)
+                condConstraints ++ bodyConstraints + ((condType, MonoType(BoolTy)))
+            }
             // Lab 2 Task 2.3 end
             
         }
@@ -159,7 +179,31 @@ object TypeInf {
         }
         case ParenExp(e) => inferExp(e)
         // Lab 2 Task 2.3
-        case _ => (MonoType(IntTy), Set()) // fixme
+        case Plus(e1, e2) => {
+            val (t1, k1) = inferExp(e1)
+            val (t2, k2) = inferExp(e2)
+            (MonoType(IntTy), k1 ++ k2 ++ Set((t1, MonoType(IntTy)), (t2, MonoType(IntTy))))
+        }
+        case Minus(e1, e2) => {
+            val (t1, k1) = inferExp(e1)
+            val (t2, k2) = inferExp(e2)
+            (MonoType(IntTy), k1 ++ k2 ++ Set((t1, MonoType(IntTy)), (t2, MonoType(IntTy))))
+        }
+        case Mult(e1, e2) => {
+            val (t1, k1) = inferExp(e1)
+            val (t2, k2) = inferExp(e2)
+            (MonoType(IntTy), k1 ++ k2 ++ Set((t1, MonoType(IntTy)), (t2, MonoType(IntTy))))
+        }
+        case DEqual(e1, e2) => {
+            val (t1, k1) = inferExp(e1)
+            val (t2, k2) = inferExp(e2)
+            (MonoType(BoolTy), k1 ++ k2 ++ Set((t1, t2)))
+        }
+        case LThan(e1, e2) => {
+            val (t1, k1) = inferExp(e1)
+            val (t2, k2) = inferExp(e2)
+            (MonoType(BoolTy), k1 ++ k2 ++ Set((t1, MonoType(IntTy)), (t2, MonoType(IntTy))))
+        }       
         // Lab 2 Task 2.3 end        
     } 
 
@@ -176,8 +220,15 @@ object TypeInf {
     given extypesUnifiable:Unifiable[(ExType, ExType)] = new Unifiable[(ExType, ExType)] {
         def mgu(p:(ExType,ExType)):Either[String,TypeSubst] = p match {
             // Lab 2 Task 2.2
-            case (exTy1, exTy2) => Left(s"error: unable to unify ${p.toString}") // fixme
-            // Lab 2 Task 2.2 end
+            case (MonoType(t1), MonoType(t2)) => 
+                if (t1 == t2) 
+                    Right(TypeSubst.Empty)
+                else 
+                    Left(s"error: cannot unify types ${t1} and ${t2}.") 
+            case (TypeVar(n), exTy) => 
+                Right(single(n, exTy))
+            case (exTy, TypeVar(n)) => 
+                Right(single(n, exTy))
         }
     }
 
@@ -194,7 +245,19 @@ object TypeInf {
         def mgu(l:List[A]):Either[String, TypeSubst] = {
             l match {
                 // Lab 2 Task 2.2
-                case _ => Left("TODO") // fixme
+                case Nil => Right(TypeSubst.Empty)
+                case x::xs => {
+                    u.mgu(x) match {
+                        case Left(err) => Left(err)
+                        case Right(psi1) => {
+                            val xs1 = s.applySubst(psi1)(xs)
+                            mgu(xs1) match {
+                                case Left(err) => Left(err)
+                                case Right(psi2) => Right(compose(psi2, psi1))
+                            }
+                        }
+                    }
+                }
                 // Lab 2 Task 2.2 end
             }
         }

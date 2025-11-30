@@ -1,2 +1,2 @@
-[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = C:\Users\wesle\Desktop\School\project\simp\target\scala-3.7.2\classes.bak[0m
-[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: C:\Users\wesle\Desktop\School\project\simp\target\scala-3.7.2\classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/target/scala-3.7.2/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /Users/shaniatirkey/Documents/GitHub/50.054-CDPA-Project-Group-3/simp/target/scala-3.7.2/classes.bak[0m
